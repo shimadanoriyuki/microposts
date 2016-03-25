@@ -2,9 +2,14 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
-<ul>
-  <li><%= @user.tel %></li>
-  <li><%= @user.location %></li>
-  <li><%= @user.contents %></li>
-</ul>
+<div class="panel panel-info">
+  <div class="panel-heading">Profile</div>
+  <div class="panel-body">
+  <ul>
+    <li><%= @user.tel %></li>
+    <li><%= @user.location %></li>
+    <li><%= @user.contents %></li>
+  </ul>
+  </div>
+</div>
 <p class="center"><%= link_to "EDIT", edit_user_path(current_user), class: "btn btn-primary" %></p>
