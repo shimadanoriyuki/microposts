@@ -23,7 +23,7 @@ class UsersController < ApplicationController
   end
   
   def update
-    @user = User.new(user_paramsedit)
+    @user = User.new(user_params)
     if @user.save
       flash[:success] = "Success Update!"
       redirect_to @user
@@ -35,12 +35,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :email, :password,
-                                 :password_confirmation)
-  end
-  
-  def user_paramsedit
-    params.require(:user).permit(:name, :email, :tel, :location, :contents, :password,
+    params.require(:user).permit(:name, :email, :password, :tel, :location, :contents, :password,
                                  :password_confirmation)
   end
 end
