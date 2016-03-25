@@ -2,4 +2,9 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
-<p class="center"><%= link_to "EDIT", profile_path, class: "btn btn-primary" %></p>
+<ul>
+  <li><%= @user.tel %></li>
+  <li><%= @user.location %></li>
+  <li><%= @user.contents %></li>
+</ul>
+<p class="center"><%= link_to "EDIT", edit_user_path(current_user), class: "btn btn-primary" %></p>
