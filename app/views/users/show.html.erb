@@ -5,11 +5,32 @@
 <div class="panel panel-info">
   <div class="panel-heading">Profile</div>
   <div class="panel-body">
-  <ul>
-    <li><%= @user.tel %></li>
-    <li><%= @user.location %></li>
-    <li><%= @user.contents %></li>
-  </ul>
+    <div class="table-responsive">
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>名前</th>
+          <td><%= @user.name %></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td><%= @user.location %></td>
+        </tr>
+        <tr>
+          <th>メールアドレス</th>
+          <td><%= @user.email %></td>
+        </tr>
+        <tr>
+          <th>電話番号</th>
+          <td><%= @user.tel %></td>
+        </tr>
+        <tr>
+          <th>自己紹介文</th>
+          <td><%= @user.contents %></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
   </div>
 </div>
 <p class="center"><%= link_to "EDIT", edit_user_path(current_user), class: "btn btn-primary" %></p>

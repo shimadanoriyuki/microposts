@@ -105,3 +105,14 @@ input {
     color: $state-danger-text;
   }
 }
+
+table {
+  tr:first-child {
+    td,th{
+    border-top:none;
+    }
+  }
+  th{
+    width:20%;
+  }
+}
