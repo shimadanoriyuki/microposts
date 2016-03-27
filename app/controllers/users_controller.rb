@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_id, only: [:show, :edit, :update]
+  before_action :check_user, only: [:edit, :update]
   
   def show
   end
@@ -19,9 +20,6 @@ class UsersController < ApplicationController
   end
   
   def edit
-    if @user != current_user
-      redirect_to @user , notice: '自分以外のプロフィールを編集することはできません'
-    end
   end
   
   def update
@@ -32,12 +30,18 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
+
+  private
   
   def set_id
     @user = User.find(params[:id])
   end
-
-  private
+  
+  def check_user
+    if @user != current_user
+      redirect_to @user , notice: '自分以外のプロフィールを編集することはできません'
+    end
+  end
 
   def user_params
     params.require(:user).permit(:name, :email, :tel, :location, :contents, :password,
