@@ -1,0 +1,15 @@
+<div class="row">
+  <aside class="col-md-4">
+    <%= render 'layouts/side' %>
+  </aside>
+  <div class="col-md-8">
+    <% if @user.following_users.any? %>
+      <h3>Followed (<%= @user.following_users.count %>)</h3>
+      <ol class="follow">
+        <%= render partial: 'followings/following', collection: @followings %>
+      </ol>
+    <% else %>
+      <h3>No Followed</h3>
+    <% end %>
+  </div>
+</div>

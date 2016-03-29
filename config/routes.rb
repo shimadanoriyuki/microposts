@@ -7,11 +7,21 @@ Rails.application.routes.draw do
   
   get    'profile', to: 'users#edit'
   post   'profile', to: 'users#update'
+  
+  #get 'following/:id', to: 'users#followings'
+  #get 'follower/:id', to: 'users#followers'
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :microposts
   resources :relationships, only: [:create, :destroy]
+  
+  resources :users do
+    member do
+      get 'followings'
+      get 'followers'
+    end
+  end
 end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

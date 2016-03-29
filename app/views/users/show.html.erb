@@ -1,42 +1,6 @@
 <div class="row">
   <aside class="col-md-4">
-    <section class="user_info">
-      <h1 class="clearfix">
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-      <div class="panel panel-info">
-        <div class="panel-heading">Profile</div>
-        <div class="panel-body">
-          <div class="table-responsive">
-          <table class="table">
-            <tbody>
-              <tr>
-                <th>名前</th>
-                <td><%= @user.name %></td>
-              </tr>
-              <tr>
-                <th>住所</th>
-                <td><%= @user.location %></td>
-              </tr>
-              <tr>
-                <th>メールアドレス</th>
-                <td><%= @user.email %></td>
-              </tr>
-              <tr>
-                <th>電話番号</th>
-                <td><%= @user.tel %></td>
-              </tr>
-              <tr>
-                <th>自己紹介文</th>
-                <td><%= @user.contents %></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        </div>
-      </div>
-    </section>
+    <%= render 'layouts/side' %>
   </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>

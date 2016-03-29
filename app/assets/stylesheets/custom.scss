@@ -148,6 +148,12 @@ aside {
       letter-spacing: -1px;
       margin-bottom: 3px;
       margin-top: 0px;
+      
+      .links
+      {
+        font-size:0.8em;
+        padding:10px 0 0;
+      }
     }
   }
 }
@@ -208,7 +214,27 @@ span.picture {
   }
 }
 
-.clear
-{
-  clear:both;
+/* follow */
+
+.follow {
+  list-style: none;
+  padding: 0;
+  li {
+    text-align:center;
+    display:inline-block;
+    width:30%;
+    padding:10px 0;
+    margin:0 5% 20px 0;
+    border: 1px solid #e8e8e8;
+  }
+  li:nth-child(3n) {
+    margin:0 0 20px;
+  }
+  .user {
+  }
+  .gravatar {
+    display:block;
+    float:none;
+    margin:0 auto 10px;
+  }
 }
