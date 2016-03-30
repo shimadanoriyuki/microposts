@@ -1,4 +1,8 @@
 <li id="following-<%= following.id %>">
+  <% if following.avatar? %>
+  <%= link_to image_tag(following.avatar, alt: following.name, class: "gravatar", size: "50"), following %>
+  <% else %>
   <%= link_to gravatar_for(following, size: 50), following %>
+  <% end %>
   <span class="user"><%= link_to following.name, following %></span>
 </li>
