@@ -234,7 +234,11 @@ span.picture {
     padding:10px 0;
     margin:0 5% 20px 0;
     border: 1px solid #e8e8e8;
+    border-radius:6px;
   }
+  li:hover {
+    border: 1px solid #337ab7;
+    }
   li:nth-child(3n) {
     margin:0 0 20px;
   }
@@ -244,6 +248,15 @@ span.picture {
     display:block;
     float:none;
     margin:0 auto 10px;
+  }
+}
+
+#follow_form {
+  display:block;
+  text-align:right;
+  input {
+    width:auto;
+    display:inline-block;
   }
 }
 
@@ -269,4 +282,40 @@ span.picture {
 .mb10
 {
   margin-bottom:10px;
+}
+
+.container .jumbotron, .container-fluid .jumbotron
+{
+  background:url(bg.jpg) no-repeat center;
+  padding:160px 60px;
+  
+  h1 {
+    display:inline-block;
+    font-weight:bold;
+    text-align:left;
+    width:60%;
+    margin:0 40px 20px 0;
+    vertical-align:middle;
+    color:#fff;
+    text-shadow:0 0 10px #000;
+  }
+}
+
+.pagination {
+  text-align:center;
+  display:block;
+  
+  span.current, a {
+    display:inline-block;
+    margin:0 5px;
+    padding:8px 12px;
+    line-height:1;
+    border:solid #eee 1px;
+    background-color:#fff;
+    border-radius:6px;
+  }
+  span.current {
+    background-color:#337ab7;
+    color:#fff;
+  }
 }

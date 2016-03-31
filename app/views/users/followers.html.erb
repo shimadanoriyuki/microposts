@@ -4,12 +4,12 @@
   </aside>
   <div class="col-md-8">
     <% if @user.follower_users.any? %>
-      <h3>Followers (<%= @user.follower_users.count %>)</h3>
+      <h3>フォローされている人 (<%= @user.follower_users.count %>)</h3>
       <ol class="follow">
         <%= render partial: 'followers/follower', collection: @followers %>
       </ol>
     <% else %>
-      <h3>No Follower</h3>
+      <h3>フォローされている人はいません</h3>
     <% end %>
   </div>
 </div>

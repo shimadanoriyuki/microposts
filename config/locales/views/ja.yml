@@ -1,0 +1,5 @@
+ja:
+  views:
+    users:
+        name: 名前
+        microposts: 投稿

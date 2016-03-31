@@ -6,7 +6,7 @@
     <%= gravatar_for @user %>
     <% end %>
     <%= @user.name %>
-    <span class="links"><%= link_to "Posts", user_path %>｜<%= link_to "Followings", followings_user_path(@user) %>｜<%= link_to "Followers", followers_user_path(@user) %></span>
+    <span class="links"><%= link_to "投稿", user_path %>｜<%= link_to "フォロー", followings_user_path(@user) %>｜<%= link_to "フォロワー", followers_user_path(@user) %></span>
   </h1>
   <table class="table">
     <tbody>

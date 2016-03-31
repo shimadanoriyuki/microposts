@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   before_action :check_user, only: [:edit, :update]
   
   def show
-    @microposts = @user.microposts.order(created_at: :desc)
+    @microposts = @user.microposts.order(created_at: :desc).page(params[:page]).per(5)
   end
   
   def new
@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      flash[:success] = "Welcome to the Sample App!"
+      flash[:success] = "ようこそマイクロポストへ！"
       redirect_to @user
     else
       render 'new'
@@ -25,7 +25,7 @@ class UsersController < ApplicationController
   
   def update
     if @user.update(user_params)
-      flash[:success] = "Success Update!"
+      flash[:success] = "更新されました"
       redirect_to @user
     else
       render 'edit'
