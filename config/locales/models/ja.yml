@@ -15,3 +15,5 @@ ja:
         tel: 電話番号
         password_confirmation: パスワード確認
         submit: 送信
+      micropost:
+        content: 投稿文

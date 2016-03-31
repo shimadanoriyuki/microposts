@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   
   def show
     @microposts = @user.microposts.order(created_at: :desc).page(params[:page]).per(5)
+    @reposts = @user.reposts.order(created_at: :desc)
   end
   
   def new
