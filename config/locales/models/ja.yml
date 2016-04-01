@@ -13,6 +13,9 @@ ja:
         salon_id: サロン
         password: パスワード
         tel: 電話番号
+        location: お住まいの地域
+        contents: 自己紹介
+        avatar: アバター画像
         password_confirmation: パスワード確認
         submit: 送信
       micropost:

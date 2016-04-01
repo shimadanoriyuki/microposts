@@ -45,6 +45,7 @@ class User < ActiveRecord::Base
     Micropost.where(user_id: following_user_ids + [self.id])
   end
   
+  attr_accessor :avatar, :avatar_cache, :remove_avatar
   mount_uploader :avatar, AvatarUploader
   
 end

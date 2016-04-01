@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: hy5oskk0k
+  api_key: '234387662339932'
+  api_secret: xJrS5QqClqoy6o8wr089LWeMGzo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: hy5oskk0k
+  api_key: '234387662339932'
+  api_secret: xJrS5QqClqoy6o8wr089LWeMGzo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: hy5oskk0k
+  api_key: '234387662339932'
+  api_secret: xJrS5QqClqoy6o8wr089LWeMGzo
+  enhance_image_tag: true
+  static_image_support: false

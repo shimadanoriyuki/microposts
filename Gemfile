@@ -52,3 +52,4 @@ end
 gem 'kaminari'
 
 gem 'carrierwave'
+gem 'cloudinary'

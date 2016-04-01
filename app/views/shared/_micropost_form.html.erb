@@ -8,5 +8,6 @@
      <span class="glyphicon glyphicon-picture" aria-hidden="true"></span> 画像アップロード<%= f.file_field :image, class: 'form-control' %>
     </span>
   </div>
+  <%= f.hidden_field :image_cache %>
   <%= f.submit "投稿", class: "btn btn-primary" %>
 <% end %>
